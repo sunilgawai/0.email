@@ -1,6 +1,8 @@
 import config from "@zero/tsconfig/base";
 import { fileURLToPath } from "url";
+import { createRequire } from 'module';
 
+const require = createRequire(import.meta.url);
 
 // @ts-ignore
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -18,3 +20,4 @@ export default [
     },
   },
 ];
+
